@@ -16,7 +16,7 @@ require('./config/passport')(passport);
 
 // Middleware
 app.use(session({
-    secret: 'super mega secret',
+    secret: keys.sessionSecret, // store secret in separate file that is not sent to github
     resave: true,
     saveUninitialized: true
 }));
